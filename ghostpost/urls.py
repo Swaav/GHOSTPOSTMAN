@@ -21,4 +21,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='homepage'),
     path('GhostAdd/', views.GhostPost_view, name='addghostpage'),
+    path('roast/', views.roast, name='roastfilter'),
+    path('boast/', views.boast, name='boastfilter'),
+    path('down/<int:id>', views.downvotes, name='downv'),
+    path('up/<int:id>', views.upvotes, name='upv'),
+    path('sort/', views.sort,name='WHOCARES' )
 ]

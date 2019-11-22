@@ -4,12 +4,16 @@
     {% for foo in data %}
         <li>{{ foo.title }}{{ foo.body }}</a></li>
         <ul>
-            <li>{{ foo.is_boast }}</li>
+            <li>{{ foo.is_boast }}{{foo.post_date}}{{foo.totalvotes}}<button><a href='/down/{{foo.id}}'>Dislikes</a></button> 
+                <button><a href='/up/{{foo.id}}'>Likes</a></button></li>
         </ul>
         <br>
     {% endfor %}
         <hr>
 
-        <a style ="border: 1px solid black; padding: 2px;" href="/GhostAdd/">boastORroast</a>
+        <a style ="border: 1px solid sienna; padding: 2px;" href="/GhostAdd/">boastORroast</a>
+        <a style ="border: 1px solid sienna; padding: 2px;" href="/roast/">Roast</a>
+        <a style ="border: 1px solid sienna; padding: 2px;" href="/boast/">Boast</a>
+        <a style ="border: 1px solid sienna; padding: 2px;" href="/sort/">whosPopular</a>
    
 </ol>
